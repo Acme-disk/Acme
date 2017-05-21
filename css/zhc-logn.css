@@ -1,0 +1,67 @@
+header{
+    width: 100%;
+    height: 5.94rem;
+    position: relative;
+    background:url("../img/zhc/images/logn-back_01.png");
+    background-size: cover;
+}
+header > div{
+    width: 1.92rem;
+    height: 1.92rem;
+    background: url("../img/zhc/images/logo_03.png");
+    background-size: cover;
+    position: absolute;
+    bottom: -0.96rem;
+    left: 50%;
+    margin-left: -0.96rem;
+}
+
+.zhc-word{
+    width: 100%;
+    height: 1.26rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.zhc-word > img{
+    height: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 1.65rem;
+    padding: 0 0.6rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+footer>div{
+    width: 2.94rem;
+    height:1rem;
+    border-radius: 0.5rem;
+    background: red;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.28rem;
+    letter-spacing: 0.04rem;
+    background: url("../img/zhc/images/logo-active_13.png");
+    background-size: cover;
+    box-shadow: 0 0.1rem 0.2rem #ead1c5;
+}
+footer>div>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ba7d5f;
+}
+
+footer>div.active{
+    background: url("../img/zhc/images/logo-actives_13.png");
+    background-size: cover;
+
+}
+footer>div.active a{
+    color: white;
+}

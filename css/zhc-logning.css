@@ -1,0 +1,211 @@
+
+body{
+    background: #f6f6f6;
+}
+header{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+header img{
+    height: 100%;
+}
+
+.zhc-touxiang{
+    width: 100%;
+    height: 3rem;
+    position: relative;
+}
+.zhc-touxiang .zhc-txbox{
+    width: 1.9rem;
+    height:1.9rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../img/zhc/images/logo-tou_07.png");
+    background-size: cover;
+    padding: 0.13rem 0;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1rem;
+}
+.zhc-touxiang .zhc-txbox img{
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 50%;
+}
+
+form{
+    height: 5.6rem;
+    width: 100%;
+    padding: 0.58rem 1.48rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.zhc-mess{
+    width: 100%;
+    height: 0.8rem;
+    position: absolute;
+    left: 0;
+    top:-0.4rem;
+    padding: 0 1.48rem;
+    box-sizing: border-box;
+    line-height: 0.2rem;
+}
+.zhc-mess img{
+    width: 1.8rem;
+    height: 0.4rem;
+}
+.zhc-mess p{
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color: #ff2a1a;
+    font-size: 0.24rem;
+}
+
+.zhc-user,.zhc-pass{
+    width: 100%;
+    height:1.06rem;
+    padding: 0.13rem 0;
+    box-sizing: border-box;
+    line-height: 0;
+    position: relative;
+}
+.zhc-user input,.zhc-pass input{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+    padding-left: 0.4rem;
+    box-sizing: border-box;
+    letter-spacing: 0.02rem;
+    outline: none;
+    border:1px solid #fff;
+}
+.zhc-user .zhc-dot,.zhc-pass .zhc-dot{
+    width: 0.08rem;
+    height: 0.08rem;
+    background: #5f5e5e;
+    border-radius: 50%;
+    position: absolute;
+    left:0.2rem;
+    top: 0.5rem;
+}
+.zhc-user .zhc-messimg,.zhc-pass .zhc-messimg{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    right: -0.6rem;
+    top: 0.3rem;
+    background: red;
+    border-radius: 50%;
+    display: none;
+}
+
+
+input.active{
+    border:1px solid #ba7d5f;
+}
+/*记住密码 忘记密码？*/
+.zhc-jzmm{
+    width: 100%;
+    height: 0.6rem;
+    padding: 0.1rem 0.38rem;
+    box-sizing: border-box;
+
+}
+.zhc-jzmm > div{
+    width: 1.4rem;
+    height: 100%;
+    line-height: 0.4rem;
+    color: #3b3a3a;
+    font-size: 0.24rem;
+    display: flex;
+    align-items: center;
+}
+.zhc-jzmm > div:nth-child(1){
+    float: left;
+}
+.zhc-jzmm > div:nth-child(2){
+    float: right;
+}
+.zhc-jzmm > div > input{
+    width: 0.3rem;
+    height: 0.3rem;
+    outline: none;
+    border: 1px solid #ba7d5f;
+    border-radius: 50%;
+    margin-right: 0.06rem;
+}
+.zhc-jzmm > div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #3b3a3a;
+    line-height: 0.4rem;
+}
+
+/*登录*/
+.zhc-logn{
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+    background: url("../img/zhc/images/zhc-btn_06.png");
+    background-size: cover;
+    line-height: 0;
+    margin-top: 0.65rem;
+}
+.zhc-logn input{
+    width: 100%;
+    height: 100%;
+    font-size: 0.28rem;
+    color: white;
+    background: rgba(0,0,0,0);
+    line-height: 0.8rem;
+    letter-spacing: 0.04rem;
+}
+
+.zhc-zhuce{
+    width: 100%;
+    height: 1.06rem;
+    line-height: 1.06rem;
+    text-align: right;
+    font-size: 0.24rem;
+    color: #414140;
+}
+.zhc-zhuce a{
+    color: #ba7d5f;
+}
+
+.zhc-qt{
+    width: 100%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #868585;
+    background: url("../img/zhc/images/qt_09.png");
+    background-size: cover;
+}
+
+footer{
+    width: 100%;
+    height: 1.85rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a{
+    display: inline-block;
+    width: 1.12rem;
+    height: 1.12rem;
+}
+footer a img{
+    width: 100%;
+    line-height: 0;
+}

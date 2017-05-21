@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="full-screen" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>注册</title>
+</head>
+<script src="../js/jquery.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/zhc-reg.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/zhc-reg.css">
+<body>
+    <header>
+        <img src="../img/zhc/images/zhc-back_03.png">
+    </header>
+
+    <form action="">
+        <div class="zhc-mess">
+            <img src="../img/zhc/images/zhc-mess_03.png">
+            <p>此用户已被注册</p>
+        </div>
+
+        <div class="zhc-user">
+            <div class="zhc-dot"></div>
+            <input type="text" name="user" placeholder="用户名/手机号/邮箱">
+            <div class="zhc-messimg"></div>
+        </div>
+
+        <div class="zhc-iden">
+            <div class="zhc-dot"></div>
+            <input type="text" name="iden" placeholder="请输入验证码">
+            <span>获取验证码</span>
+        </div>
+
+        <div class="zhc-pass">
+            <div class="zhc-dot"></div>
+            <input type="password" name="pass" placeholder="请输入6-12位数字字母密码">
+            <div class="zhc-messimg"></div>
+        </div>
+        <div class="zhc-pass">
+            <div class="zhc-dot"></div>
+            <input type="password" name="passtwo" placeholder="请再次输入密码">
+            <div class="zhc-messimg"></div>
+        </div>
+
+        <div class="zhc-http">
+            <input type="radio" name="http" id="http">
+            <label for="http">我已阅读并接受</label>
+            <a href="">用户注册协议</a>
+        </div>
+
+        <div class="zhc-reg">
+            <input type="button" value="立即注册">
+        </div>
+    </form>
+
+<!--注册成功遮罩-->
+    <section class="zhc-zhe">
+        <img src="../img/zhc/images/zhc-logn2_02.png">
+        <button>
+            <a href="zhc-logoimg.html"><img src="../img/zhc/images/zhc-logn1_03.png" alt=""></a>
+        </button>
+    </section>
+</body>
+</html>
