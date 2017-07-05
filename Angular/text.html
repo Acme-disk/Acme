@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>攻城笔记</title>
+</head>
+<script src="jquery.js"></script>
+<script src="bootstrap.js"></script>
+<script src="angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+<body>
+	<!-- jquery 
+	dom操作的封装，解决兼容性问题
+	影视循环
+	链式调用
+	封装了查询的功能 -->
+
+	<!-- angular 
+	实现了双向数据绑定
+	实现了mvvm的架构模式
+	封装了指令
+	按照模块化编程 -->
+
+	<!-- 减少程序的复杂性
+	更专注于功能的逻辑 -->
+
+	<!--<div ng-app="myapp" >
+		<div ng-controller="ctrl">
+			{{aaa}}
+		</div>
+	</div>
+	<script>
+		var box=angular.module("myapp",[])
+		box.controller("ctrl",function($scope){
+			$scope.aaa="zheng";
+		})
+	</script>-->
+	
+	<!--model-->
+	
+	<!--<div ng-app='byt'ng-controller="jj">
+		<input type="text" ng-model="aa">
+		<input type="text" ng-model="bb">
+		<div>{{aa*bb}}</div>
+	</div>
+	
+	<script>
+		angular.module('byt',[])
+		.controller("jj",function($scope){
+			$scope.aa="10",
+			$scope.bb="6"
+		})
+	</script>-->
+	
+	<!--<div ng-app="myApp" ng-controller="myCtrl">
+ 
+	名: <input type="text" ng-model="firstName"><br>
+	姓: <input type="text" ng-model="lastName"><br>
+	<br>
+	姓名: {{firstName + " " + lastName}}
+	 {{firstName}}
+	</div>
+	<script>
+		angular.module('myApp',[]).controller("myCtrl",function($scope){
+			$scope.firstName="张"
+			$scope.lastName="合成"
+		})
+	</script>-->
+	<!--ng-show="条件"    隐藏显示-->
+	<!--ng-show="data.lenght==0"-->
+	
+	
+	<div ng-app="myapp">
+		<div class="form-group">
+		<!--ng-model放到table里边有问题-->
+		    <input type="text" class="form-control" ng-model="aa" placeholder="Search...">
+		  </div>
+		  <table class="table table-striped" ng-controller="Ctrl">
+			<tr>
+				<th>商品ID</th>
+				<th>商品名称</th>
+				<th>
+					商品单价
+					<span class="caret" ng-click="order()"></span>
+				</th>
+				<th>商品数量</th>
+				<th>操作</th>
+			</tr>
+			<tr ng-repeat="item in shop | filter:aa | orderBy : type+'price'">
+				<td>{{item.id}}</td>
+				<td>{{item.shopname}}</td>
+				<td>{{item.price}}</td>
+				<td>
+					<div class="input-group">
+				      <div class="input-group-addon" ng-click="minus(item.id)">-</div>
+				      <input type="text" class="form-control" value="{{item.num}}"  placeholder="Amount">
+				      <div class="input-group-addon" ng-click="add(item.id)">+</div>
+	    			</div>
+				</td>
+				<td><button class="btn btn-default" type="button" ng-click="del(item.id)">del</button></td>
+			</tr>
+			<tr>
+				<td>商品总价格<span style="color:#008888">{{sum()}}</span></td>
+				<td>商品总数<span style="color:#008888">{{sumsub()}}</span></td>
+				<td></td>
+				<td><button class="btn btn-default" type="button" ng-click="clear()">清空</button></td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+		angular.module('myapp',[])
+		.controller("Ctrl",function($scope){
+			$scope.shop=[{
+				id:1,
+				shopname:"黄马褂",
+				price:10,
+				num:20
+			},
+			{
+				id:2,
+				shopname:"红马褂",
+				price:50,
+				num:10
+			},
+			{
+				id:3,
+				shopname:"紫马褂",
+				price:100,
+				num:1
+			},
+			{
+				id:4,
+				shopname:"黄金战衣",
+				price:40,
+				num:10
+			}]
+			,
+//			加加
+			$scope.add=function(id){
+				for(let i=0;i<$scope.shop.length;i++){
+					if(id==$scope.shop[i].id){
+						$scope.shop[i].num++;
+					}
+				}
+			},
+//			减减
+			$scope.minus=function(id){
+				for(let i=0;i<$scope.shop.length;i++){
+					if(id==$scope.shop[i].id){
+						$scope.shop[i].num--;
+						if($scope.shop[i].num<=0){
+							$scope.shop[i].num=0;
+						}
+					}
+				}
+			},
+			$scope.sum=function(){
+				let sum=0;
+				for(var i=0;i<$scope.shop.length;i++){
+					sum+=$scope.shop[i].price*$scope.shop[i].num;
+				}
+				return sum;
+			}
+			,
+			$scope.sumsub=function(){
+				var sum2=0;
+				for(let i=0;i<$scope.shop.length;i++){
+					sum2+=$scope.shop[i].num;
+				}
+				return sum2;
+			}
+			$scope.del=function(id){
+				for(let i=0;i<$scope.shop.length;i++){
+					if(id==$scope.shop[i].id){
+						$scope.shop.splice(i,1);
+					}
+				}
+			}
+			
+			,
+//			全部清空
+			$scope.clear=function(){
+				$scope.shop=[];
+			}
+			,
+			$scope.$watch("aa",function (a,b) {
+                console.log(a);
+                console.log(b)
+           })
+			
+//			排序
+			$scope.pirce="";
+			$scope.type="";
+			$scope.order=function(){
+				console.log(1);
+				if($scope.type==""){
+					console.log(2)
+					$scope.type=="-"
+				}else{
+					console.log("type已经不是空的了")
+					$scope.type=="";
+				}
+			}
+		})
+	</script>
+</body>
+</html>

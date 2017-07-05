@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="angular.min.js"></script>
+	<script src="todo.js"></script>
+	<link rel="stylesheet" href="../bootstrap.css" />
+	<link rel="stylesheet" href="todo.css" />
+	<body ng-app="myapp">
+		<section class="container" ng-controller="todo">
+			<section class="left col-xs-3">
+				<!--搜索-->
+				<div class="input-group">
+				    <input type="text" class="form-control search" ng-model="search" placeholder="Search...">
+				</div>
+				<!--已完成-->
+				<div class="success">
+					<span>已完成</span>
+					<span>{{num}}</span>
+				</div>
+				
+				<!--新建列表-->
+				<ul class="list">
+					<li ng-repeat="item in arr track by item.id">
+						<input type="text" ng-model="item.name"/>
+						<button type="button" ng-click="del(item.id)">del</button>
+					</li>
+				</ul>
+				
+				<!--添加内容-->
+				<button type="button" class="btn btn-info add" ng-click="add()">新建内容+</button>
+			</section>
+			<section class="right col-xs-9">
+				<div class="right_head">
+					新建列表
+				</div>
+				<ul class="col-xs-12">
+					<li>
+						<span>1234</span>
+						<button type="button" class="btn btn-default">del</button>
+					</li>
+				</ul>
+			</section>	
+		</section>
+		
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+</head>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<body>
+<!-- <div data-ng-app="" data-ng-init="num='3';nub='9'">
+    <p data-ng-init="bug='马大bug';name='张大帅'">名字 :</p>
+    <input type="text" data-ng-model="variable">
+    <pre>{{bug}}{{name}}{{variable}}</pre>
+    <!--可以运算-->
+   <!--  <p>我的第一个表达式：{{5+100 }}</p>
+    <p>我的第二个表达式：{{bug+" "+name }}</p>
+    <p>我的第三个表达式：{{num*nub}}</p> -->
+    <!--和霜花括号一样-->
+    <!-- <span data-ng-bind="num+''+nub"></span> -->
+    <!--对象的方式-->
+    <!-- <div data-ng-init="obj={par:'width',exp:'height'}"> -->
+        <!-- {{obj.par}} -->
+    <!-- </div> -->
+    <!--数组的方式-->
+    <!-- <div data-ng-init="arr=[1,2,3,4,5]"> -->
+        <!-- {{arr[2]}} -->
+    <!-- </div> -->
+    <!--不支持条件判断-->
+<!-- </div> --> 
+
+
+<!--<section data-ng-app="App" data-ng-controller="Ctrl">-->
+    <!--名：<input type="text" data-ng-model="first"><br>-->
+    <!--姓：<input type="text" data-ng-model="last"><br>-->
+    <!--<h5>-->
+        <!--{{first+" "+last}}-->
+    <!--</h5>-->
+<!--</section>-->
+<!--<script>-->
+    <!--var apps=angular.module('App',[]);-->
+    <!--apps.controller('Ctrl',function ($scope) {-->
+        <!--$scope.first="mlgb";-->
+        <!--$scope.last="fff";-->
+    <!--})-->
+<!--</script>-->
+<!-- 
+<section ng-app="" ng-init="price='5';num='6'">
+    <h1>价格计算器</h1>
+    数量：<input type="text" ng-model="num">
+    单价：<input type="text" ng-model="price">
+    <h2>money:{{price*num}}</h2>
+</section> -->
+
+<!-- <div ng-app="box" ng-controller="ctl">
+    <h1>价格计算器</h1>
+    数量：<input type="text" ng-model="num">
+    单价：<input type="text" ng-model="price">
+    <h2>money:{{price*num}}</h2>
+</div> -->
+
+
+<div ng-app="">
+    <p>名字 : <input type="text" ng-model="name"></p>
+    <h1>Hello {{name}}</h1>
+</div>
+</body>
+</html>
