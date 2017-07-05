@@ -89,3 +89,10 @@ section.container{
 	align-items: center;
 	border-bottom: 1px solid #ccc;
 }
+.right ul li input{
+	border: none;
+	outline: none;
+	background: none;
+	height: 100%;
+	width: 80%;
+}

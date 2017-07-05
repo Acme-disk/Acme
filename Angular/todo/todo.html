@@ -18,13 +18,14 @@
 				<!--已完成-->
 				<div class="success">
 					<span>已完成</span>
-					<span>{{num}}</span>
+					<span>{{num()}}</span>
 				</div>
 				
 				<!--新建列表-->
 				<ul class="list">
 					<li ng-repeat="item in arr track by item.id">
-						<input type="text" ng-model="item.name"/>
+						<input type="text" ng-model="item.name" ng-change="edit(item.id)"/>
+						<!--<span>{{item.name}}</span>-->
 						<button type="button" ng-click="del(item.id)">del</button>
 					</li>
 				</ul>
@@ -38,7 +39,7 @@
 				</div>
 				<ul class="col-xs-12">
 					<li>
-						<span>1234</span>
+						<input type="text" value="1234"/>
 						<button type="button" class="btn btn-default">del</button>
 					</li>
 				</ul>

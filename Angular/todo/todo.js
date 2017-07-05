@@ -1,6 +1,8 @@
 angular.module("myapp",[])
     .controller("todo",["$scope",function($scope){
-    	$scope.num="10";
+    	$scope.num=function(){
+    		return $scope.arr.length;
+    	};
 //  	定义数据  
     	$scope.arr=localStorage.message?JSON.parse(localStorage.message):[];
         console.log($scope.arr)
@@ -40,10 +42,19 @@ angular.module("myapp",[])
         	
         	for(var i=0;i<$scope.arr.length;i++){
                 if(id==$scope.arr[i].id){
-                	$scope.arr[i]=null;
+                	$scope.arr.splice(i,1);
                 }
             }
         	console.log($scope.arr)
         	localStorage.message=JSON.stringify($scope.arr)
         }
+//      修改
+		$scope.edit=function(id){
+			for(var i=0;i<$scope.arr.length;i++){
+                if(id==$scope.arr[i].id){
+                	$scope.arr[i].name
+                }
+            }
+			localStorage.message=JSON.stringify($scope.arr)
+		}
     }])
