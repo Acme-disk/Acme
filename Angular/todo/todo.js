@@ -44,5 +44,6 @@ angular.module("myapp",[])
                 }
             }
         	console.log($scope.arr)
+        	localStorage.message=JSON.stringify($scope.arr)
         }
     }])
